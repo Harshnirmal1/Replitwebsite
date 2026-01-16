@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+import logo from "@assets/generated_images/ChatGPT_Image_Jan_12,_2026,_01_57_16_PM_1768563926621.png";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -34,8 +36,11 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/">
-          <a className="text-2xl font-bold font-heading text-primary tracking-tight">
-            Raghav<span className="text-foreground">Technologies</span>
+          <a className="flex items-center gap-2">
+            <img src={logo} alt="Raghav Technologies Logo" className="h-10 w-auto" />
+            <span className="text-2xl font-bold font-heading text-primary tracking-tight hidden sm:inline">
+              Raghav<span className="text-foreground">Technologies</span>
+            </span>
           </a>
         </Link>
 

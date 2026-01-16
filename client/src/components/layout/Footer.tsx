@@ -1,6 +1,8 @@
 import { Link } from "wouter";
 import { Facebook, Twitter, Instagram, Linkedin, Heart } from "lucide-react";
 
+import logo from "@assets/generated_images/ChatGPT_Image_Jan_12,_2026,_01_57_16_PM_1768563926621.png";
+
 const Footer = () => {
   return (
     <footer className="bg-slate-950 text-slate-300 pt-20 pb-10">
@@ -9,8 +11,11 @@ const Footer = () => {
           
           <div>
             <Link href="/">
-              <a className="text-2xl font-bold font-heading text-white tracking-tight mb-6 block">
-                Raghav<span className="text-primary">Technologies</span>
+              <a className="flex items-center gap-2 mb-6">
+                <img src={logo} alt="Raghav Technologies Logo" className="h-10 w-auto brightness-0 invert" />
+                <span className="text-2xl font-bold font-heading text-white tracking-tight">
+                  Raghav<span className="text-primary">Technologies</span>
+                </span>
               </a>
             </Link>
             <p className="text-slate-400 mb-6 leading-relaxed">
@@ -18,7 +23,7 @@ const Footer = () => {
               Partner with us to transform your ideas into reality.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="h-10 w-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/raghav-technology" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
               <a href="#" className="h-10 w-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
@@ -57,15 +62,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex flex-col">
                 <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Email</span>
-                <span className="text-white">hello@raghavtech.com</span>
+                <span className="text-white">harsh@raghavtechnologies.com</span>
               </li>
               <li className="flex flex-col">
                 <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Phone</span>
-                <span className="text-white">+1 (555) 123-4567</span>
+                <span className="text-white">+91 8849660901</span>
               </li>
               <li className="flex flex-col">
                 <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Address</span>
-                <span className="text-white">123 Innovation Drive,<br/>Tech Valley, CA 90210</span>
+                <span className="text-white">Rajkot, Gujarat, India</span>
               </li>
             </ul>
           </div>

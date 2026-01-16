@@ -64,7 +64,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">Email Us</p>
-                  <p className="text-lg font-semibold">hello@raghavtech.com</p>
+                  <p className="text-lg font-semibold">harsh@raghavtechnologies.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -73,7 +73,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">Call Us</p>
-                  <p className="text-lg font-semibold">+1 (555) 123-4567</p>
+                  <p className="text-lg font-semibold">+91 8849660901</p>
                 </div>
               </div>
                <div className="flex items-center gap-4">
@@ -82,7 +82,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">Visit Us</p>
-                  <p className="text-lg font-semibold">123 Tech Park, Innovation City</p>
+                  <p className="text-lg font-semibold">Rajkot, Gujarat, India</p>
                 </div>
               </div>
             </div>
