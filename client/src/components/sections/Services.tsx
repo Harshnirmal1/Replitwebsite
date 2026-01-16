@@ -5,7 +5,7 @@ import {
   Database, 
   Layers, 
   Wrench, 
-  Cloud,
+  BrainCircuit,
   ArrowUpRight 
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -32,9 +32,9 @@ const services = [
     description: "Comprehensive ERP implementation and customization to manage your business operations efficiently."
   },
   {
-    icon: Cloud,
-    title: "Cloud Infrastructure",
-    description: "Scalable cloud architecture and deployment strategies to ensure your applications are always available."
+    icon: BrainCircuit,
+    title: "AI / ML Solutions",
+    description: "Leverage the power of Artificial Intelligence and Machine Learning to gain insights and automate complex tasks."
   },
   {
     icon: Wrench,
