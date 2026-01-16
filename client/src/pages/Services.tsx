@@ -16,6 +16,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Contact from "@/components/sections/Contact";
 
+import heroBg from "@assets/generated_images/abstract_tech_hero_background.png";
+
 const services = [
   {
     id: "web-development",
@@ -132,8 +134,17 @@ export default function ServicesPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-slate-950 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(37,99,235,0.1),transparent)]" />
+      <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 overflow-hidden">
+        {/* Background with overlay */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
+          <img 
+            src={heroBg} 
+            alt="Background" 
+            className="w-full h-full object-cover opacity-80"
+          />
+        </div>
+
         <div className="container relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -143,18 +154,15 @@ export default function ServicesPage() {
             <Badge className="mb-4 bg-primary hover:bg-primary/90 text-white border-none px-4 py-1">
               B2B Technology Partner
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              End-to-End Software Development Services for Growing Businesses
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 leading-tight text-foreground">
+              End-to-End Software Development Services
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
               Accelerate your digital transformation with high-performance solutions. We combine speed, enterprise-grade quality, and scalability to help you dominate your market.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white h-14 px-8 text-lg font-semibold">
                 Get a Free Consultation
-              </Button>
-              <Button size="lg" variant="outline" className="border-slate-700 text-white hover:bg-slate-900 h-14 px-8 text-lg font-semibold">
-                Explore Services
               </Button>
             </div>
           </motion.div>
