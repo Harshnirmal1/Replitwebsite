@@ -17,6 +17,9 @@ import Footer from "@/components/layout/Footer";
 import Contact from "@/components/sections/Contact";
 
 import heroBg from "@assets/generated_images/abstract_tech_hero_background.png";
+import webDevImg from "@assets/generated_images/web_development_team_working_on_code.png";
+import erpImg from "@assets/generated_images/enterprise_erp_system_visualization.png";
+import whiteLabelImg from "@assets/generated_images/white_label_agency_partnership_concept.png";
 
 const services = [
   {
@@ -31,7 +34,8 @@ const services = [
       "Performance optimization for Core Web Vitals"
     ],
     useCases: "Ideal for B2B SaaS platforms, enterprise portals, and complex customer-facing web applications.",
-    icon: Code
+    icon: Code,
+    image: webDevImg
   },
   {
     id: "mobile-apps",
@@ -87,7 +91,8 @@ const services = [
       "Third-party Software Integrations"
     ],
     useCases: "Essential for manufacturing, distribution, and large-scale retail operations requiring tight inventory control.",
-    icon: Layers
+    icon: Layers,
+    image: erpImg
   },
   {
     id: "white-label",
@@ -101,7 +106,8 @@ const services = [
       "Seamless Communication with your Project Managers"
     ],
     useCases: "Best for marketing and design agencies that need to offer technical execution to their clients.",
-    icon: Users
+    icon: Users,
+    image: whiteLabelImg
   },
   {
     id: "maintenance",
@@ -209,13 +215,31 @@ export default function ServicesPage() {
                 <div className="flex-1 w-full aspect-[4/3] relative">
                   <div className="absolute inset-0 bg-primary/5 rounded-[2rem] -rotate-2 transition-transform group-hover:rotate-0 duration-500" />
                   <div className="relative h-full w-full bg-white rounded-[2rem] overflow-hidden shadow-sm border border-slate-200/60 group-hover:shadow-md transition-all duration-500 flex items-center justify-center">
-                    <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
-                    <div className="relative z-10 flex items-center justify-center">
-                       <div className="absolute -inset-8 bg-primary/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                       <div className="p-8 rounded-full bg-slate-50 border border-slate-100 shadow-inner group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500">
-                         <service.icon size={60} className="text-slate-400 group-hover:text-primary transition-colors duration-500" />
-                       </div>
-                    </div>
+                    {service.image ? (
+                      <div className="absolute inset-0">
+                        <img 
+                          src={service.image} 
+                          alt={service.title} 
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                        />
+                        <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors duration-500" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="p-6 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
+                            <service.icon size={48} className="text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
+                        <div className="relative z-10 flex items-center justify-center">
+                           <div className="absolute -inset-8 bg-primary/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                           <div className="p-8 rounded-full bg-slate-50 border border-slate-100 shadow-inner group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500">
+                             <service.icon size={60} className="text-slate-400 group-hover:text-primary transition-colors duration-500" />
+                           </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
