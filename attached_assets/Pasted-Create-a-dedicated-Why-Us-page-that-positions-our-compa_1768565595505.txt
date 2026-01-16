@@ -1,0 +1,100 @@
+Create a dedicated “Why Us” page that positions our company as a reliable, long-term B2B technology partner. This page should answer the buyer’s core question: “Why should we choose you over others?” and be optimized for trust, clarity, and conversions.
+
+Goals
+
+Build instant credibility
+
+Differentiate us from generic IT vendors
+
+Address buyer concerns (quality, reliability, cost, communication)
+
+Convert visitors into inquiries
+
+Page Structure
+1. Hero Section
+
+H1: “Why Businesses Choose Raghav Technologies”
+
+Subtext:
+“We’re not just developers—we’re your technology partner focused on outcomes, quality, and long-term success.”
+
+CTA: Talk to an Expert
+
+2. Our Promise
+
+Short, bold statements such as:
+
+On-time, on-budget delivery
+
+Clear communication & transparency
+
+Enterprise-grade quality
+
+Long-term partnership mindset
+
+3. Key Differentiators (Each as a Block)
+
+Experienced Delivery Team – 10+ years combined experience, proven processes
+
+White-Label Ready – Trusted by agencies as their delivery arm
+
+Business-First Approach – We think in outcomes, not just code
+
+Scalable Engagement Models – Project-based, dedicated teams, retainer
+
+Quality & Security Focus – Code standards, QA, data protection
+
+Each block should include:
+
+Benefit-driven copy
+
+A short real-world example or outcome
+
+4. How We Work
+
+Discover → Plan → Build → Test → Launch → Support
+Explain how this reduces risk for clients.
+
+5. Proof & Trust Signals
+
+Years in business
+
+Projects delivered
+
+Industries served
+
+Client testimonials / logos
+
+6. Who We Work Best With
+
+Define your ideal clients:
+
+Startups
+
+SMEs
+
+Agencies (white-label)
+
+Enterprises
+
+This helps qualify leads.
+
+7. Final CTA Section
+
+Strong closing message:
+“If you’re looking for a technology partner who treats your business like their own, let’s talk.”
+Button: Get a Free Consultation
+
+SEO & Content Requirements
+
+Keyword usage: IT services company, software development partner, offshore development team, white-label development, custom software company
+
+Proper H1/H2 hierarchy
+
+800–1,000 words
+
+Internal links to Services & Contact pages
+
+Professional, enterprise tone
+
+The page should feel like it’s written for decision-makers—CTOs, Founders, and Agency Owners—who value reliability, clarity, and long-term partnerships.
