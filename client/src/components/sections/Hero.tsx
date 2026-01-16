@@ -5,7 +5,7 @@ import heroBg from "@assets/generated_images/abstract_tech_hero_background.png";
 
 const Hero = () => {
   return (
-    <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+    <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 overflow-hidden">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />

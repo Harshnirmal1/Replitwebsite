@@ -13,9 +13,6 @@ const Footer = () => {
             <Link href="/">
               <div className="flex items-center gap-2 mb-6 cursor-pointer">
                 <img src={logo} alt="Raghav Technologies Logo" className="h-10 w-auto brightness-0 invert" />
-                <span className="text-2xl font-bold font-heading text-white tracking-tight">
-                  Raghav<span className="text-primary">Technologies</span>
-                </span>
               </div>
             </Link>
             <p className="text-slate-400 mb-6 leading-relaxed">
@@ -26,10 +23,10 @@ const Footer = () => {
               <a href="https://www.linkedin.com/company/raghav-technology" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="h-10 w-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+              <a href="#" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="h-10 w-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+              <a href="#" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
