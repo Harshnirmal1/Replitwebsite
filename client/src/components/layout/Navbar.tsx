@@ -37,7 +37,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/">
           <div className="flex items-center gap-2 cursor-pointer">
-            <img src={logo} alt="Raghav Technologies Logo" className="h-14 w-auto" />
+            <img src={logo} alt="Raghav Technologies Logo" className="h-20 w-auto" />
           </div>
         </Link>
 

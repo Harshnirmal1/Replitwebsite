@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <Link href="/">
               <div className="flex items-center gap-2 mb-6 cursor-pointer">
-                <img src={logo} alt="Raghav Technologies Logo" className="h-14 w-auto brightness-0 invert" />
+                <img src={logo} alt="Raghav Technologies Logo" className="h-20 w-auto brightness-0 invert" />
               </div>
             </Link>
             <p className="text-slate-400 mb-6 leading-relaxed">
