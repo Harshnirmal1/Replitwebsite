@@ -202,15 +202,21 @@ export default function ServicesPage() {
                       <span className="font-bold text-slate-900 not-italic">Use Case:</span> {service.useCases}
                     </p>
                   </div>
-                  <Button className="mt-6" variant="ghost">
-                    Talk to an Expert <ArrowRight className="ml-2" size={16} />
+                  <Button className="mt-6 font-semibold group" variant="ghost">
+                    Talk to an Expert <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
                   </Button>
                 </div>
-                <div className="flex-1 w-full aspect-video bg-slate-100 rounded-3xl overflow-hidden shadow-2xl relative group">
-                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                   <div className="flex items-center justify-center h-full">
-                     <service.icon size={120} className="text-slate-300 group-hover:text-primary/40 transition-colors duration-500" />
-                   </div>
+                <div className="flex-1 w-full aspect-[4/3] relative">
+                  <div className="absolute inset-0 bg-primary/5 rounded-[2rem] -rotate-2 transition-transform group-hover:rotate-0 duration-500" />
+                  <div className="relative h-full w-full bg-white rounded-[2rem] overflow-hidden shadow-sm border border-slate-200/60 group-hover:shadow-md transition-all duration-500 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
+                    <div className="relative z-10 flex items-center justify-center">
+                       <div className="absolute -inset-8 bg-primary/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                       <div className="p-8 rounded-full bg-slate-50 border border-slate-100 shadow-inner group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500">
+                         <service.icon size={60} className="text-slate-400 group-hover:text-primary transition-colors duration-500" />
+                       </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
