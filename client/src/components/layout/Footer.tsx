@@ -41,8 +41,8 @@ const Footer = () => {
               <li><a href="#" className="hover:text-primary transition-colors">Web Development</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Mobile Apps</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Custom Software</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Cloud Solutions</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">UI/UX Design</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Odoo / ERP Solutions</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Maintenance & Support</a></li>
             </ul>
           </div>
 

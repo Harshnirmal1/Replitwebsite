@@ -38,9 +38,6 @@ const Navbar = () => {
         <Link href="/">
           <div className="flex items-center gap-2 cursor-pointer">
             <img src={logo} alt="Raghav Technologies Logo" className="h-10 w-auto" />
-            <span className="text-2xl font-bold font-heading text-primary tracking-tight hidden sm:inline">
-              Raghav<span className="text-foreground">Technologies</span>
-            </span>
           </div>
         </Link>
 

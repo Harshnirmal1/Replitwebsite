@@ -5,6 +5,7 @@ import {
   Database, 
   Layers, 
   Wrench, 
+  Cloud,
   ArrowUpRight 
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -29,6 +30,11 @@ const services = [
     icon: Layers,
     title: "Odoo / ERP Solutions",
     description: "Comprehensive ERP implementation and customization to manage your business operations efficiently."
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Infrastructure",
+    description: "Scalable cloud architecture and deployment strategies to ensure your applications are always available."
   },
   {
     icon: Wrench,
