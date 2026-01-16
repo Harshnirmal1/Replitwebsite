@@ -36,12 +36,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/">
-          <a className="flex items-center gap-2">
+          <div className="flex items-center gap-2 cursor-pointer">
             <img src={logo} alt="Raghav Technologies Logo" className="h-10 w-auto" />
             <span className="text-2xl font-bold font-heading text-primary tracking-tight hidden sm:inline">
               Raghav<span className="text-foreground">Technologies</span>
             </span>
-          </a>
+          </div>
         </Link>
 
         {/* Desktop Nav */}

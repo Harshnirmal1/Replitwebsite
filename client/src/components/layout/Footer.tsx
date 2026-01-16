@@ -11,12 +11,12 @@ const Footer = () => {
           
           <div>
             <Link href="/">
-              <a className="flex items-center gap-2 mb-6">
+              <div className="flex items-center gap-2 mb-6 cursor-pointer">
                 <img src={logo} alt="Raghav Technologies Logo" className="h-10 w-auto brightness-0 invert" />
                 <span className="text-2xl font-bold font-heading text-white tracking-tight">
                   Raghav<span className="text-primary">Technologies</span>
                 </span>
-              </a>
+              </div>
             </Link>
             <p className="text-slate-400 mb-6 leading-relaxed">
               We build scalable digital solutions for ambitious businesses. 
