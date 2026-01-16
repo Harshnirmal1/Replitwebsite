@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Facebook, Twitter, Instagram, Linkedin, Heart } from "lucide-react";
 
-import logo from "@assets/ChatGPT_Image_Jan_12,_2026,_01_57_16_PM_1768563926621.png";
+import logo from "@assets/ChatGPT_Image_Jan_16,_2026,_05_26_42_PM_1768564612066.png";
 
 const Footer = () => {
   return (
