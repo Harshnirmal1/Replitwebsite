@@ -18,8 +18,12 @@ import Contact from "@/components/sections/Contact";
 
 import heroBg from "@assets/generated_images/abstract_tech_hero_background.png";
 import webDevImg from "@assets/generated_images/web_development_team_working_on_code.png";
+import mobileAppImg from "@assets/generated_images/modern_mobile_app_interface_mockup.png";
+import customSoftwareImg from "@assets/generated_images/custom_software_development_dashboard_visualization.png";
+import aiMlImg from "@assets/generated_images/ai_and_machine_learning_neural_network_visualization.png";
 import erpImg from "@assets/generated_images/enterprise_erp_system_visualization.png";
 import whiteLabelImg from "@assets/generated_images/white_label_agency_partnership_concept.png";
+import maintenanceImg from "@assets/generated_images/it_maintenance_and_server_support_visualization.png";
 
 const services = [
   {
@@ -49,7 +53,8 @@ const services = [
       "App Store & Play Store Deployment"
     ],
     useCases: "Perfect for customer loyalty programs, on-demand service platforms, and internal business productivity tools.",
-    icon: Smartphone
+    icon: Smartphone,
+    image: mobileAppImg
   },
   {
     id: "custom-software",
@@ -63,7 +68,8 @@ const services = [
       "Robust Data Security & Compliance"
     ],
     useCases: "Designed for supply chain management, complex data analytics, and unique internal operational needs.",
-    icon: Settings
+    icon: Settings,
+    image: customSoftwareImg
   },
   {
     id: "ai-ml",
@@ -77,7 +83,8 @@ const services = [
       "Automated Process Optimization"
     ],
     useCases: "Used for demand forecasting, automated customer support (AI Chatbots), and intelligent document processing.",
-    icon: BrainCircuit
+    icon: BrainCircuit,
+    image: aiMlImg
   },
   {
     id: "odoo-erp",
@@ -121,7 +128,8 @@ const services = [
       "Help Desk Support for Internal Teams"
     ],
     useCases: "Required for mission-critical applications that cannot afford downtime or security vulnerabilities.",
-    icon: Wrench
+    icon: Wrench,
+    image: maintenanceImg
   }
 ];
 
