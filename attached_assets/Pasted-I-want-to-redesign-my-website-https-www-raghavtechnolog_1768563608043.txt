@@ -1,0 +1,122 @@
+I want to redesign my website https://www.raghavtechnologies.com/
+ to make it modern, professional, and conversion-focused, similar in quality and structure to top IT service companies like Codilime.
+
+The goal is to clearly position us as a B2B software & IT services company and increase inbound leads.
+
+Objectives
+
+Make the value proposition clear within 3 seconds
+
+Improve visual hierarchy and readability
+
+Build trust with clients (enterprise-ready look)
+
+Increase inquiries and conversions
+
+Key Changes Required
+1. Hero Section
+
+Strong headline:
+“Scalable Web, App & Software Solutions for Growing Businesses”
+
+Subtext explaining what we do in one line
+
+Primary CTA: “Talk to Us” / “Get a Quote”
+
+Clean layout with whitespace and a modern visual
+
+2. Services Section
+
+Use card-based layout with icons for:
+
+Web Development
+
+Mobile App Development
+
+Custom Software
+
+Odoo / ERP
+
+Maintenance & Support
+
+Each card: short benefit-driven copy
+
+3. Why Choose Us
+
+3–5 blocks highlighting:
+
+Delivery reliability
+
+Experienced team
+
+White-label support
+
+Cost efficiency
+
+Long-term partnership mindset
+
+4. Portfolio / Case Studies
+
+Add a “Our Work” section:
+
+Project name
+
+Problem → Solution
+
+Tech stack
+
+Screenshot
+
+5. Trust Signals
+
+Client logos
+
+Testimonials
+
+Years of experience / projects delivered
+
+6. About / Team Page
+
+Company story
+
+Mission & values
+
+Process
+
+Leadership / core team
+
+7. UI / Design Direction
+
+Clean, modern, minimal layout
+
+Large readable fonts with hierarchy
+
+Consistent color palette
+
+Professional icons
+
+Subtle animations & hover effects
+
+Mobile-first responsive design
+
+8. Conversion Optimization
+
+Sticky CTA in header
+
+Contact form with clear promise (“Response within 24 hours”)
+
+CTA at end of every major section
+
+Deliverables
+
+Redesigned homepage (Figma / XD)
+
+Responsive layouts
+
+Updated content & structure
+
+Final implementation on WordPress
+
+Basic SEO setup (titles, meta, headings)
+
+The end result should feel like an enterprise-ready IT services brand that builds instant trust and drives B2B inquiries.
