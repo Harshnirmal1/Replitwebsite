@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Contact from "@/components/sections/Contact";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import heroBg from "@assets/generated_images/abstract_tech_hero_background.png";
+import fintechCaseImg from "@assets/generated_images/modern_fintech_dashboard_visualization_blue_cyan.png";
 
 const successStories = [
   {
@@ -14,7 +15,7 @@ const successStories = [
     challenge: "Scaling a legacy payment gateway to handle 10x traffic increase.",
     solution: "Microservices architecture migration with high-availability Odoo integration.",
     impact: "99.99% uptime during peak seasons and 40% reduction in processing latency.",
-    image: "https://images.unsplash.com/photo-1551288049-bbbda536ad0a?q=80&w=2070&auto=format&fit=crop"
+    image: fintechCaseImg
   },
   {
     client: "EduTech Pioneers",
