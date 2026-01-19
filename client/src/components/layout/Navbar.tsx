@@ -24,7 +24,7 @@ const Navbar = () => {
     { name: "Services", href: "/services" },
     { name: "Why Us", href: "/why-us" },
     { name: "Success Stories", href: "/success-stories" },
-    { name: "About", href: "/#about" },
+    { name: "About", href: "/about" },
   ];
 
   return (
@@ -44,17 +44,19 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-          <Button className="font-semibold shadow-lg shadow-primary/20">
-            Talk to Us
-          </Button>
+          <Link href="/contact">
+            <Button className="font-semibold shadow-lg shadow-primary/20">
+              Talk to Us
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -77,16 +79,18 @@ const Navbar = () => {
           >
             <div className="container mx-auto py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
                   className="text-lg font-medium text-foreground py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
-              <Button className="w-full mt-4">Get a Quote</Button>
+              <Link href="/contact" onClick={() => setIsOpen(false)}>
+                <Button className="w-full mt-4">Talk to Us</Button>
+              </Link>
             </div>
           </motion.div>
         )}
