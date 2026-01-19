@@ -12,15 +12,11 @@ export default function AboutUsPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Hero Section - Consistent with Home/Success Stories */}
-      <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 overflow-hidden">
+      {/* Modern Minimal Hero */}
+      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-950 text-white">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
-          <img 
-            src={heroBg} 
-            alt="Background" 
-            className="w-full h-full object-cover opacity-80"
-          />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
+          <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')]" />
         </div>
 
         <div className="container mx-auto relative z-20 px-4 md:px-6">
@@ -29,10 +25,10 @@ export default function AboutUsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6 text-foreground"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6"
             >
               Driving Digital <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">
                 Transformation
               </span>
             </motion.h1>
@@ -41,7 +37,7 @@ export default function AboutUsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
+              className="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl leading-relaxed"
             >
               Raghav Technologies is a premier IT consulting and software development firm dedicated to building scalable solutions for ambitious global enterprises.
             </motion.p>

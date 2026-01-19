@@ -12,15 +12,10 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 overflow-hidden">
+      {/* Modern Minimal Hero */}
+      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-950 text-white">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
-          <img 
-            src={heroBg} 
-            alt="Background" 
-            className="w-full h-full object-cover opacity-80"
-          />
+          <div className="absolute top-1/2 left-0 w-72 h-72 bg-primary/10 rounded-full blur-[100px] -translate-x-1/2" />
         </div>
 
         <div className="container mx-auto relative z-20 px-4 md:px-6">
@@ -29,10 +24,10 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6 text-foreground"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6"
             >
               Let's Build <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">
                 Together
               </span>
             </motion.h1>
@@ -41,7 +36,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
+              className="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl leading-relaxed"
             >
               Ready to start your next big project? Our team of experts is here to guide you through every step of your digital journey.
             </motion.p>

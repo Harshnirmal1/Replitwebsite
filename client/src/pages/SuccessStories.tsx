@@ -44,16 +44,11 @@ export default function SuccessStoriesPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Reusing Home Hero Style */}
-      <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 overflow-hidden">
-        {/* Background with overlay */}
+      {/* Modern Minimal Hero */}
+      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-950 text-white">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
-          <img 
-            src={heroBg} 
-            alt="Background" 
-            className="w-full h-full object-cover opacity-80"
-          />
+          <div className="absolute top-0 right-0 w-full h-full opacity-[0.05] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]" />
         </div>
 
         <div className="container mx-auto relative z-20 px-4 md:px-6">
@@ -62,10 +57,10 @@ export default function SuccessStoriesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6 text-foreground"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6"
             >
               Our Clients' <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">
                 Success Stories
               </span>
             </motion.h1>
@@ -74,7 +69,7 @@ export default function SuccessStoriesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
+              className="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl leading-relaxed"
             >
               We transform complex business challenges into elegant digital products. 
               From enterprise platforms to mobile apps, we build the technology that powers your growth.
@@ -95,7 +90,7 @@ export default function SuccessStoriesPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="mt-12 flex items-center gap-6 text-sm text-muted-foreground font-medium"
+              className="mt-12 flex items-center gap-6 text-sm text-slate-500 font-medium"
             >
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-primary" />

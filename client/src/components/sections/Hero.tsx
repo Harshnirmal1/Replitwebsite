@@ -5,15 +5,12 @@ import heroBg from "@assets/generated_images/abstract_tech_hero_background.png";
 
 const Hero = () => {
   return (
-    <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 overflow-hidden">
-      {/* Background with overlay */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
-        <img 
-          src={heroBg} 
-          alt="Background" 
-          className="w-full h-full object-cover opacity-80"
-        />
+    <section className="relative pt-24 pb-20 md:pt-32 md:pb-24 overflow-hidden bg-slate-950">
+      {/* Abstract Design Elements instead of Big Image */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -mr-64 -mt-32" />
+        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] -ml-32 -mb-16" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
       </div>
 
       <div className="container mx-auto relative z-20 px-4 md:px-6">

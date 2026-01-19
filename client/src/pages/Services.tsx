@@ -147,16 +147,11 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 overflow-hidden">
-        {/* Background with overlay */}
+      {/* Modern Minimal Hero */}
+      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-950 text-white">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
-          <img 
-            src={heroBg} 
-            alt="Background" 
-            className="w-full h-full object-cover opacity-80"
-          />
+          <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px]" />
+          <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-blue-600/5 rounded-full blur-[80px]" />
         </div>
 
         <div className="container relative z-10">
@@ -168,17 +163,15 @@ export default function ServicesPage() {
             <Badge className="mb-4 bg-primary hover:bg-primary/90 text-white border-none px-4 py-1">
               B2B Technology Partner
             </Badge>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 leading-tight text-foreground">
-              End-to-End Software Development Services
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 leading-tight">
+              End-to-End <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">
+                Software Services
+              </span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-400 mb-8 leading-relaxed">
               Accelerate your digital transformation with high-performance solutions. We combine speed, enterprise-grade quality, and scalability to help you dominate your market.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white h-14 px-8 text-lg font-semibold">
-                Get a Free Consultation
-              </Button>
-            </div>
           </motion.div>
         </div>
       </section>
