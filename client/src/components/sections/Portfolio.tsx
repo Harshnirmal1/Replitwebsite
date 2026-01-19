@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 import fintechImg from "@assets/generated_images/fintech_dashboard_project.png";
 import healthImg from "@assets/generated_images/healthcare_app_project.png";
@@ -41,15 +42,17 @@ const Portfolio = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-foreground">
-              Featured Work
+              Success Stories
             </h2>
             <p className="text-muted-foreground text-lg">
               We take pride in delivering high-quality solutions that drive real business results.
             </p>
           </div>
-          <Button variant="outline" className="hidden md:flex">
-            View All Projects
-          </Button>
+          <Link href="/success-stories">
+            <Button variant="outline" className="hidden md:flex">
+              View All Stories
+            </Button>
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,9 +101,11 @@ const Portfolio = () => {
         </div>
         
         <div className="mt-8 text-center md:hidden">
-          <Button variant="outline" className="w-full">
-            View All Projects
-          </Button>
+          <Link href="/success-stories">
+            <Button variant="outline" className="w-full">
+              View All Stories
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

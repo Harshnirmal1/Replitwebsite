@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Contact from "@/components/sections/Contact";
-import { ExternalLink, ArrowRight, Quote } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
+import heroBg from "@assets/generated_images/abstract_tech_hero_background.png";
 
 const successStories = [
   {
@@ -42,20 +43,71 @@ export default function SuccessStoriesPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      <section className="pt-32 pb-20 bg-slate-950 text-white overflow-hidden relative">
-        <div className="absolute inset-0 bg-primary/10 bg-[radial-gradient(circle_at_30%_50%,rgba(37,99,235,0.1),transparent)]" />
-        <div className="container relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
-          >
-            <Badge className="mb-4 bg-primary text-white border-none">Success Stories</Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Real Results for Global Leaders</h1>
-            <p className="text-xl text-slate-400 mb-8 leading-relaxed">
+      {/* Reusing Home Hero Style */}
+      <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
+          <img 
+            src={heroBg} 
+            alt="Background" 
+            className="w-full h-full object-cover opacity-80"
+          />
+        </div>
+
+        <div className="container mx-auto relative z-20 px-4 md:px-6">
+          <div className="max-w-3xl">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6 text-foreground"
+            >
+              Our Clients' <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
+                Success Stories
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
+            >
               Discover how we've helped businesses across the globe solve complex technical challenges and achieve measurable growth.
-            </p>
-          </motion.div>
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <Button size="lg" className="text-lg px-8 h-14 shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all">
+                Start Your Story <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="mt-12 flex items-center gap-6 text-sm text-muted-foreground font-medium"
+            >
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-primary" />
+                <span>Enterprise Grade</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-primary" />
+                <span>Proven Impact</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-primary" />
+                <span>Scalable Results</span>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -70,31 +122,31 @@ export default function SuccessStoriesPage() {
                 viewport={{ once: true }}
                 className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center`}
               >
-                <div className="flex-1 w-full aspect-video rounded-3xl overflow-hidden shadow-2xl">
+                <div className="flex-1 w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-border/50">
                   <img src={story.image} alt={story.client} className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1 space-y-6">
                   <div className="text-primary font-bold tracking-widest uppercase text-sm">{story.industry}</div>
-                  <h2 className="text-3xl font-bold">{story.client}</h2>
+                  <h2 className="text-3xl font-bold font-heading">{story.client}</h2>
                   
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-bold text-slate-900 flex items-center gap-2">
+                      <h4 className="font-bold text-foreground flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-primary" /> The Challenge
                       </h4>
-                      <p className="text-slate-600 mt-1">{story.challenge}</p>
+                      <p className="text-muted-foreground mt-1">{story.challenge}</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-900 flex items-center gap-2">
+                      <h4 className="font-bold text-foreground flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Our Solution
                       </h4>
-                      <p className="text-slate-600 mt-1">{story.solution}</p>
+                      <p className="text-muted-foreground mt-1">{story.solution}</p>
                     </div>
                   </div>
 
-                  <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                  <div className="p-6 bg-secondary/30 rounded-2xl border border-border/50">
                     <div className="text-primary font-bold text-3xl mb-1">{story.impact.split(' ')[0]}</div>
-                    <p className="text-slate-600 font-medium">{story.impact.split(' ').slice(1).join(' ')}</p>
+                    <p className="text-muted-foreground font-medium">{story.impact.split(' ').slice(1).join(' ')}</p>
                   </div>
 
                   <Button variant="outline" className="group">
@@ -107,12 +159,12 @@ export default function SuccessStoriesPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-slate-50 border-y border-slate-200">
+      <section className="py-20 bg-secondary/10 border-y border-border/50">
         <div className="container text-center">
-          <h2 className="text-2xl font-bold mb-12 text-slate-400 uppercase tracking-widest">Trusted By Companies Worldwide</h2>
+          <h2 className="text-xl font-bold mb-12 text-muted-foreground uppercase tracking-widest">Trusted By Companies Worldwide</h2>
           <div className="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             {clients.map(client => (
-              <span key={client} className="text-3xl font-black text-slate-900">{client}</span>
+              <span key={client} className="text-3xl font-black text-foreground">{client}</span>
             ))}
           </div>
         </div>
