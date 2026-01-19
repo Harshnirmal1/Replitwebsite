@@ -61,33 +61,31 @@ const workSteps = [
 
 export default function WhyUsPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
-      {/* Modern Minimal Hero */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-950 text-white">
+      {/* Light, Clean Header */}
+      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-50 border-b border-slate-100">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]" />
-          <div className="absolute top-1/2 right-0 w-80 h-80 bg-primary/20 rounded-full blur-[100px] translate-x-1/2" />
+          <div className="absolute top-1/2 right-0 w-80 h-80 bg-primary/10 rounded-full blur-[100px] translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-50 rounded-full blur-[80px]" />
         </div>
 
-        <div className="container relative z-10">
+        <div className="container relative z-10 text-center mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
+            className="max-w-4xl mx-auto"
           >
-            <Badge className="mb-4 bg-primary hover:bg-primary/90 text-white border-none px-4 py-1">
-              Your Long-Term Partner
+            <Badge className="mb-4 bg-primary/10 text-primary border-none px-4 py-1 hover:bg-primary/20 transition-colors">
+              The Raghav Advantage
             </Badge>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-extrabold font-heading mb-6 leading-tight text-slate-900">
               Why Businesses <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">
-                Choose Us
-              </span>
+              <span className="text-primary">Choose Us</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-400 mb-8 leading-relaxed">
-              We're not just developers—we're your technology partner focused on outcomes, quality, and long-term success. Discover how we turn technical complexity into business growth.
+            <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+              We're not just developers—we're your technology partner focused on outcomes, quality, and long-term success.
             </p>
           </motion.div>
         </div>

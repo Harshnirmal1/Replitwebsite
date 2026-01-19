@@ -9,38 +9,28 @@ import heroBg from "@assets/generated_images/abstract_tech_hero_background.png";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
-      {/* Modern Minimal Hero */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-950 text-white">
+      {/* Light, Modern Header */}
+      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-50 border-b border-slate-100">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/2 left-0 w-72 h-72 bg-primary/10 rounded-full blur-[100px] -translate-x-1/2" />
+          <div className="absolute top-1/2 left-0 w-72 h-72 bg-primary/5 rounded-full blur-[100px] -translate-x-1/2" />
         </div>
 
-        <div className="container mx-auto relative z-20 px-4 md:px-6">
-          <div className="max-w-3xl">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6"
-            >
+        <div className="container mx-auto relative z-20 px-4 md:px-6 text-center">
+          <motion.div className="max-w-4xl mx-auto">
+            <Badge className="mb-4 bg-primary/10 text-primary border-none px-4 py-1 hover:bg-primary/20 transition-colors">
+              Contact Us
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-extrabold font-heading mb-6 leading-tight text-slate-900">
               Let's Build <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">
-                Together
-              </span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl leading-relaxed"
-            >
+              <span className="text-primary">Together</span>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
               Ready to start your next big project? Our team of experts is here to guide you through every step of your digital journey.
-            </motion.p>
-          </div>
+            </p>
+          </motion.div>
         </div>
       </section>
 

@@ -41,71 +41,28 @@ const clients = [
 
 export default function SuccessStoriesPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
-      {/* Modern Minimal Hero */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-950 text-white">
+      {/* Light, Minimalist Header */}
+      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-50 border-b border-slate-100">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 w-full h-full opacity-[0.05] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
         </div>
 
-        <div className="container mx-auto relative z-20 px-4 md:px-6">
-          <div className="max-w-3xl">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6"
-            >
+        <div className="container mx-auto relative z-20 px-4 md:px-6 text-center">
+          <motion.div className="max-w-4xl mx-auto">
+            <Badge className="mb-4 bg-primary/10 text-primary border-none px-4 py-1 hover:bg-primary/20 transition-colors">
+              Impact
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-extrabold font-heading mb-6 leading-tight text-slate-900">
               Our Clients' <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">
-                Success Stories
-              </span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl leading-relaxed"
-            >
-              We transform complex business challenges into elegant digital products. 
-              From enterprise platforms to mobile apps, we build the technology that powers your growth.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <Button size="lg" className="text-lg px-8 h-14 shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all">
-                Talk to Us <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="mt-12 flex items-center gap-6 text-sm text-slate-500 font-medium"
-            >
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                <span>Enterprise Grade</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                <span>24/7 Support</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                <span>Agile Delivery</span>
-              </div>
-            </motion.div>
-          </div>
+              <span className="text-primary">Success Stories</span>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+              We transform complex business challenges into elegant digital products. From enterprise platforms to mobile apps, we build the technology that powers your growth.
+            </p>
+          </motion.div>
         </div>
       </section>
 
