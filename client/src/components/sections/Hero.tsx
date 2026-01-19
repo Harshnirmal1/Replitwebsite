@@ -5,17 +5,27 @@ import heroBg from "@assets/generated_images/abstract_tech_hero_background.png";
 
 const Hero = () => {
   return (
-    <section className="relative pt-24 pb-20 md:pt-32 md:pb-24 overflow-hidden bg-white">
-      {/* Soft, professional gradient backgrounds instead of dark blue */}
+    <section className="relative pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden bg-slate-50/50">
+      {/* Soft, professional gradient backgrounds */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50 rounded-full blur-[100px] -mr-64 -mt-32 opacity-70" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[80px] -ml-32 -mb-16 opacity-60" />
-        {/* Subtle geometric pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `radial-gradient(#2563eb 0.5px, transparent 0.5px)`, backgroundSize: '24px 24px' }} />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/40 rounded-full blur-[120px] -mr-64 -mt-32" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] -ml-32 -mb-16" />
+        {/* Subtle grid pattern to fill space */}
+        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: `linear-gradient(#2563eb 1px, transparent 1px), linear-gradient(90deg, #2563eb 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
       </div>
 
       <div className="container mx-auto relative z-20 px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mb-6 inline-block"
+          >
+            <Badge variant="outline" className="px-4 py-1 border-primary/20 text-primary bg-primary/5 rounded-full font-semibold">
+              Trusted by 200+ Global Businesses
+            </Badge>
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -26,8 +36,6 @@ const Hero = () => {
             <span className="text-primary">
               Software Solutions
             </span>
-            <br />
-            for Growing Businesses
           </motion.h1>
 
           <motion.p
@@ -49,8 +57,8 @@ const Hero = () => {
             <Button size="lg" className="text-lg px-10 h-14 bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/20 transition-all rounded-full">
               Talk to Us <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-10 h-14 border-slate-200 hover:bg-slate-50 transition-all rounded-full">
-              View Our Success Stories
+            <Button variant="outline" size="lg" className="text-lg px-10 h-14 border-slate-200 bg-white/50 backdrop-blur-sm hover:bg-slate-50 transition-all rounded-full">
+              View Success Stories
             </Button>
           </motion.div>
 

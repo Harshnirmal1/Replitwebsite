@@ -144,14 +144,15 @@ const processSteps = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-slate-50/30">
       <Navbar />
       
       {/* Light, Minimalist Header */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-50 border-b border-slate-100">
+      <section className="relative pt-28 pb-16 overflow-hidden bg-white border-b border-slate-100">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px]" />
-          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-100/30 rounded-full blur-[80px]" />
+          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-100/20 rounded-full blur-[80px]" />
+          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: `radial-gradient(#2563eb 1px, transparent 1px)`, backgroundSize: '32px 32px' }} />
         </div>
 
         <div className="container relative z-10 text-center mx-auto">
@@ -161,7 +162,7 @@ export default function ServicesPage() {
             className="max-w-4xl mx-auto"
           >
             <Badge className="mb-4 bg-primary/10 text-primary border-none px-4 py-1 hover:bg-primary/20 transition-colors">
-              Our Capabilities
+              Expert Capabilities
             </Badge>
             <h1 className="text-4xl md:text-6xl font-extrabold font-heading mb-6 leading-tight text-slate-900">
               End-to-End <br />

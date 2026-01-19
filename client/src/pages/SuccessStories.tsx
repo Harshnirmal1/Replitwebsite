@@ -41,19 +41,20 @@ const clients = [
 
 export default function SuccessStoriesPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-slate-50/30">
       <Navbar />
       
       {/* Light, Minimalist Header */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-50 border-b border-slate-100">
+      <section className="relative pt-28 pb-16 overflow-hidden bg-white border-b border-slate-100">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
+          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `radial-gradient(#2563eb 1px, transparent 1px)`, backgroundSize: '24px 24px' }} />
         </div>
 
         <div className="container mx-auto relative z-20 px-4 md:px-6 text-center">
           <motion.div className="max-w-4xl mx-auto">
             <Badge className="mb-4 bg-primary/10 text-primary border-none px-4 py-1 hover:bg-primary/20 transition-colors">
-              Impact
+              Our Success
             </Badge>
             <h1 className="text-4xl md:text-6xl font-extrabold font-heading mb-6 leading-tight text-slate-900">
               Our Clients' <br />

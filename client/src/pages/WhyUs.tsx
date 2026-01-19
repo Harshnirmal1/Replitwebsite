@@ -61,14 +61,15 @@ const workSteps = [
 
 export default function WhyUsPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-slate-50/30">
       <Navbar />
       
       {/* Light, Clean Header */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-50 border-b border-slate-100">
+      <section className="relative pt-28 pb-16 overflow-hidden bg-white border-b border-slate-100">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-1/2 right-0 w-80 h-80 bg-primary/10 rounded-full blur-[100px] translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-50 rounded-full blur-[80px]" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-50/50 rounded-full blur-[80px]" />
+          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: `linear-gradient(#2563eb 1px, transparent 1px), linear-gradient(90deg, #2563eb 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
         </div>
 
         <div className="container relative z-10 text-center mx-auto">
