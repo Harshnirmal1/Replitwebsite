@@ -45,6 +45,7 @@ export default function SuccessStoriesPage() {
       
       {/* Reusing Home Hero Style */}
       <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 overflow-hidden">
+        {/* Background with overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
           <img 
@@ -74,7 +75,8 @@ export default function SuccessStoriesPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
             >
-              Discover how we've helped businesses across the globe solve complex technical challenges and achieve measurable growth.
+              We transform complex business challenges into elegant digital products. 
+              From enterprise platforms to mobile apps, we build the technology that powers your growth.
             </motion.p>
 
             <motion.div
@@ -84,7 +86,7 @@ export default function SuccessStoriesPage() {
               className="flex flex-col sm:flex-row gap-4"
             >
               <Button size="lg" className="text-lg px-8 h-14 shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all">
-                Start Your Story <ArrowRight className="ml-2 h-5 w-5" />
+                Talk to Us <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </motion.div>
 
@@ -100,11 +102,11 @@ export default function SuccessStoriesPage() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-primary" />
-                <span>Proven Impact</span>
+                <span>24/7 Support</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-primary" />
-                <span>Scalable Results</span>
+                <span>Agile Delivery</span>
               </div>
             </motion.div>
           </div>
