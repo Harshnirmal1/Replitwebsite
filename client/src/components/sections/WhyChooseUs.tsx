@@ -31,54 +31,63 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section id="why-us" className="py-24 bg-background">
+    <section id="why-us" className="py-16 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6 text-foreground leading-tight">
+            <Badge className="mb-4 bg-primary/10 text-primary border-none px-4 py-1">Why Us</Badge>
+            <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6 text-slate-900 leading-tight">
               Why leading companies <br />
               <span className="text-primary">trust us</span> with their software.
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-slate-600 mb-8">
               We bring a unique blend of technical excellence and business acumen to every project.
             </p>
             
-            <div className="space-y-8">
+            <div className="space-y-6">
               {features.slice(0, 3).map((feature, idx) => (
-                <div key={idx} className="flex gap-4">
+                <motion.div 
+                  key={idx} 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="flex gap-4"
+                >
                   <div className="flex-shrink-0 mt-1">
-                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
                       <feature.icon className="h-5 w-5 text-primary" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    <h3 className="text-xl font-bold text-slate-900 mb-1">{feature.title}</h3>
+                    <p className="text-slate-600 leading-relaxed">{feature.description}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
 
-          <div className="grid gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-6">
             {features.slice(3).map((feature, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.2 }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-card border p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                className="bg-slate-50 border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all group"
               >
-                 <div className="h-12 w-12 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
-                    <feature.icon className="h-6 w-6 text-blue-600" />
+                 <div className="h-12 w-12 rounded-xl bg-white flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform">
+                    <feature.icon className="h-6 w-6 text-primary" />
                   </div>
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-slate-900">{feature.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
             
@@ -86,7 +95,8 @@ const WhyChooseUs = () => {
                initial={{ opacity: 0, scale: 0.95 }}
                whileInView={{ opacity: 1, scale: 1 }}
                viewport={{ once: true }}
-               className="bg-primary p-8 rounded-2xl text-primary-foreground flex flex-col justify-center items-center text-center"
+               transition={{ duration: 0.5 }}
+               className="bg-primary p-8 rounded-2xl text-primary-foreground flex flex-col justify-center items-center text-center shadow-xl shadow-primary/20"
             >
               <h3 className="text-2xl font-bold mb-2">Ready to start?</h3>
               <p className="mb-6 opacity-90">Get a free consultation for your next big project.</p>

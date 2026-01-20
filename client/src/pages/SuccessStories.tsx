@@ -82,47 +82,53 @@ export default function SuccessStoriesPage() {
         </div>
       </section>
 
-      <section className="py-24">
+      <section className="py-12 md:py-16">
         <div className="container">
-          <div className="grid gap-16">
+          <div className="grid gap-16 md:gap-24">
             {successStories.map((story, index) => (
               <motion.div 
                 key={story.client}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center`}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-16 items-center`}
               >
-                <div className="flex-1 w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-border/50">
-                  <img src={story.image} alt={story.client} className="w-full h-full object-cover" />
+                <div className="flex-1 w-full aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-200 group relative">
+                  <img src={story.image} alt={story.client} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors" />
                 </div>
                 <div className="flex-1 space-y-6">
-                  <div className="text-primary font-bold tracking-widest uppercase text-sm">{story.industry}</div>
-                  <h2 className="text-3xl font-bold font-heading">{story.client}</h2>
+                  <div className="flex items-center gap-2">
+                    <span className="h-px w-8 bg-primary/30" />
+                    <span className="text-primary font-bold tracking-widest uppercase text-xs">{story.industry}</span>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold font-heading text-slate-900 leading-tight">{story.client}</h2>
                   
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-bold text-foreground flex items-center gap-2">
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="space-y-1">
+                      <h4 className="font-bold text-slate-900 text-sm flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-primary" /> The Challenge
                       </h4>
-                      <p className="text-muted-foreground mt-1">{story.challenge}</p>
+                      <p className="text-slate-600 text-sm leading-relaxed">{story.challenge}</p>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-foreground flex items-center gap-2">
+                    <div className="space-y-1">
+                      <h4 className="font-bold text-slate-900 text-sm flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Our Solution
                       </h4>
-                      <p className="text-muted-foreground mt-1">{story.solution}</p>
+                      <p className="text-slate-600 text-sm leading-relaxed">{story.solution}</p>
                     </div>
                   </div>
 
-                  <div className="p-6 bg-secondary/30 rounded-2xl border border-border/50">
-                    <div className="text-primary font-bold text-3xl mb-1">{story.impact.split(' ')[0]}</div>
-                    <p className="text-muted-foreground font-medium">{story.impact.split(' ').slice(1).join(' ')}</p>
+                  <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-center justify-between">
+                    <div>
+                      <div className="text-primary font-bold text-3xl mb-0.5 tracking-tight">{story.impact.split(' ')[0]}</div>
+                      <p className="text-slate-500 text-xs font-bold uppercase tracking-wider">{story.impact.split(' ').slice(1).join(' ')}</p>
+                    </div>
+                    <Button variant="outline" className="rounded-full group h-12 px-6 border-slate-200 bg-white">
+                      Case Study <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
                   </div>
-
-                  <Button variant="outline" className="group">
-                    Read Full Case Study <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
                 </div>
               </motion.div>
             ))}

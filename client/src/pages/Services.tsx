@@ -177,45 +177,49 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Breakdown */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="container">
-          <div className="space-y-32">
+          <div className="space-y-20 md:space-y-28">
             {services.map((service, index) => (
-              <div 
+              <motion.div 
                 key={service.id} 
                 id={service.id}
-                className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-24 items-center`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6 }}
+                className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-24 items-center`}
               >
-                <div className="flex-1 space-y-6">
-                  <div className="inline-flex p-3 rounded-2xl bg-primary/10 text-primary mb-4">
-                    <service.icon size={32} />
+                <div className="flex-1 space-y-5">
+                  <div className="inline-flex p-3 rounded-2xl bg-primary/10 text-primary mb-2">
+                    <service.icon size={28} />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+                  <h2 className="text-2xl md:text-4xl font-bold text-slate-900 leading-tight">
                     {service.h2}
                   </h2>
-                  <p className="text-lg text-slate-600 leading-relaxed">
+                  <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                     {service.description}
                   </p>
-                  <div className="grid sm:grid-cols-2 gap-4 pt-4">
+                  <div className="grid sm:grid-cols-2 gap-3 pt-2">
                     {service.benefits.map((benefit) => (
-                      <div key={benefit} className="flex items-start gap-3">
-                        <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
-                        <span className="text-slate-700 font-medium">{benefit}</span>
+                      <div key={benefit} className="flex items-start gap-2">
+                        <CheckCircle2 className="text-primary mt-1 shrink-0" size={16} />
+                        <span className="text-slate-700 text-sm font-medium">{benefit}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="p-4 bg-slate-50 border-l-4 border-primary rounded-r-lg">
+                  <div className="p-4 bg-slate-50 border-l-4 border-primary rounded-r-xl">
                     <p className="text-sm text-slate-600 italic">
                       <span className="font-bold text-slate-900 not-italic">Use Case:</span> {service.useCases}
                     </p>
                   </div>
-                  <Button className="mt-6 font-semibold group" variant="ghost">
+                  <Button className="mt-4 font-semibold group rounded-full" variant="outline">
                     Talk to an Expert <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
                   </Button>
                 </div>
-                <div className="flex-1 w-full aspect-[4/3] relative">
-                  <div className="absolute inset-0 bg-primary/5 rounded-[2rem] -rotate-2 transition-transform group-hover:rotate-0 duration-500" />
-                  <div className="relative h-full w-full bg-white rounded-[2rem] overflow-hidden shadow-sm border border-slate-200/60 group-hover:shadow-md transition-all duration-500 flex items-center justify-center">
+                <div className="flex-1 w-full aspect-[4/3] relative group">
+                  <div className="absolute inset-0 bg-primary/5 rounded-[2rem] -rotate-1 group-hover:rotate-0 transition-transform duration-500" />
+                  <div className="relative h-full w-full bg-white rounded-[2rem] overflow-hidden shadow-sm border border-slate-200/60 group-hover:shadow-xl transition-all duration-500 flex items-center justify-center">
                     {service.image ? (
                       <div className="absolute inset-0">
                         <img 

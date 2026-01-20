@@ -78,13 +78,14 @@ export default function AboutUsPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-24 bg-secondary/20">
+      <section className="py-16 bg-slate-50/50">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4">Our Core Values</h2>
-            <p className="text-muted-foreground">The principles that guide every line of code we write and every partnership we build.</p>
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <Badge className="mb-4 bg-primary/10 text-primary border-none px-4 py-1">Values</Badge>
+            <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-slate-900">Our Core Values</h2>
+            <p className="text-slate-600">The principles that guide every line of code we write and every partnership we build.</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               { icon: Award, title: "Excellence", desc: "We never settle for 'good enough'. We aim for technical perfection in every project." },
               { icon: Users, title: "Collaboration", desc: "We operate as a seamless extension of your team, fostering open and transparent communication." },
@@ -92,54 +93,63 @@ export default function AboutUsPage() {
             ].map((value, idx) => (
               <motion.div 
                 key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-background p-8 rounded-2xl border border-border/50 shadow-sm"
+                className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all group"
               >
-                <value.icon className="h-10 w-10 text-primary mb-6" />
-                <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                <p className="text-muted-foreground">{value.desc}</p>
+                <div className="h-12 w-12 rounded-xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <value.icon className="h-6 w-6 text-primary group-hover:text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-slate-900">{value.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{value.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Team Section Placeholder */}
-      <section className="py-24">
+      {/* Team Section */}
+      <section className="py-16 bg-white overflow-hidden">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-5xl font-bold font-heading">Led by Experts</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <Badge className="bg-primary/10 text-primary border-none px-4 py-1">Leadership</Badge>
+              <h2 className="text-3xl md:text-5xl font-bold font-heading text-slate-900">Led by Experts</h2>
+              <p className="text-lg text-slate-600 leading-relaxed">
                 Our team consists of senior architects, skilled developers, and creative designers with decades of collective experience in the IT industry. We bring a wealth of knowledge to every challenge.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="text-primary h-5 w-5" />
-                  <span className="font-medium">10+ Years Industry Experience</span>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                  <CheckCircle className="text-primary h-5 w-5 shrink-0" />
+                  <span className="font-medium text-slate-700 text-sm">10+ Years Experience</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="text-primary h-5 w-5" />
-                  <span className="font-medium">Expertise in Odoo, ERP & Custom Software</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="text-primary h-5 w-5" />
-                  <span className="font-medium">Global Client Footprint</span>
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                  <CheckCircle className="text-primary h-5 w-5 shrink-0" />
+                  <span className="font-medium text-slate-700 text-sm">ERP & Custom Software</span>
                 </div>
               </div>
-              <Button size="lg" className="mt-4">Join Our Team</Button>
-            </div>
-            <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
+              <Button size="lg" className="mt-4 rounded-full px-8 shadow-xl shadow-primary/20">Join Our Team</Button>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative aspect-video lg:aspect-square rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200"
+            >
               <img 
                 src={teamStock} 
                 alt="Our Team" 
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-primary/10" />
-            </div>
+              <div className="absolute inset-0 bg-primary/5" />
+            </motion.div>
           </div>
         </div>
       </section>

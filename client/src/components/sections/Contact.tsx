@@ -38,76 +38,69 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-16 bg-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-blue-50/50 rounded-l-[100px]" />
+    <section id="contact" className="py-12 bg-white relative overflow-hidden">
+      <div className="absolute top-0 right-0 -z-10 w-full md:w-1/2 h-full bg-slate-50/80 rounded-l-[100px] hidden md:block" />
       
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
+            <Badge className="mb-4 bg-primary/10 text-primary border-none px-4 py-1">Contact</Badge>
+            <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6 text-slate-900 leading-tight">
               Let's build something <br />
               <span className="text-primary">great together</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-slate-600 mb-8 max-w-lg">
               Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you within 24 hours.
             </p>
 
-            <div className="space-y-6 mb-12">
-              <div className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-secondary flex items-center justify-center text-primary">
+            <div className="grid sm:grid-cols-2 gap-6 mb-10">
+              <div className="flex items-center gap-4 group">
+                <div className="h-12 w-12 rounded-xl bg-slate-50 flex items-center justify-center text-primary border border-slate-100 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground">Email Us</p>
-                  <p className="text-lg font-semibold">harsh@raghavtechnologies.com</p>
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Email Us</p>
+                  <p className="text-sm font-semibold text-slate-700">harsh@raghavtechnologies.com</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-secondary flex items-center justify-center text-primary">
+              <div className="flex items-center gap-4 group">
+                <div className="h-12 w-12 rounded-xl bg-slate-50 flex items-center justify-center text-primary border border-slate-100 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground">Call Us</p>
-                  <p className="text-lg font-semibold">+91 8849660901</p>
-                </div>
-              </div>
-               <div className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-secondary flex items-center justify-center text-primary">
-                  <MapPin className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground">Visit Us</p>
-                  <p className="text-lg font-semibold">Rajkot, Gujarat, India</p>
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Call Us</p>
+                  <p className="text-sm font-semibold text-slate-700">+91 8849660901</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-primary/5 p-6 rounded-xl border border-primary/10">
-               <h4 className="font-bold mb-4 flex items-center gap-2">
+            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 inline-block">
+               <h4 className="font-bold mb-4 flex items-center gap-2 text-slate-900">
                  <Shield className="h-4 w-4 text-primary" />
-                 Our Promise
+                 Our Commitment
                </h4>
-               <ul className="space-y-2 text-sm text-muted-foreground">
-                 <li className="flex items-center gap-2"><Check className="h-3 w-3 text-primary" /> Non-Disclosure Agreement (NDA)</li>
-                 <li className="flex items-center gap-2"><Check className="h-3 w-3 text-primary" /> Transparent Pricing</li>
-                 <li className="flex items-center gap-2"><Check className="h-3 w-3 text-primary" /> No Obligation Quote</li>
+               <ul className="space-y-2 text-sm text-slate-600">
+                 <li className="flex items-center gap-2"><Check className="h-3 w-3 text-primary shrink-0" /> Full IP Protection & NDA</li>
+                 <li className="flex items-center gap-2"><Check className="h-3 w-3 text-primary shrink-0" /> Agile & Transparent Pricing</li>
                </ul>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-border"
+            transition={{ duration: 0.6 }}
+            className="bg-white p-6 md:p-8 rounded-3xl shadow-2xl border border-slate-100 relative z-10"
           >
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <FormField
                   control={form.control}
                   name="name"
