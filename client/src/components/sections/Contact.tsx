@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";

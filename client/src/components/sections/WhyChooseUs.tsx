@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
 import { Shield, Users, Zap, Clock, Smile } from "lucide-react";
 
 const features = [
