@@ -5,7 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Contact from "@/components/sections/Contact";
 import { CheckCircle, Target, Users, Zap, Award } from "lucide-react";
-import heroBg from "@assets/generated_images/abstract_tech_hero_background.png";
+import teamStock from "@assets/stock_images/professional_diverse_06c4fded.jpg";
 
 export default function AboutUsPage() {
   return (
@@ -134,7 +134,7 @@ export default function AboutUsPage() {
             </div>
             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1522071823992-b487172a9c4a?q=80&w=2070&auto=format&fit=crop" 
+                src={teamStock} 
                 alt="Our Team" 
                 className="w-full h-full object-cover"
               />
