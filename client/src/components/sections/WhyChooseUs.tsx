@@ -74,7 +74,7 @@ const WhyChooseUs = () => {
             </div>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-6 w-full">
             {features.slice(3).map((feature, idx) => (
               <motion.div
                 key={idx}
@@ -82,7 +82,7 @@ const WhyChooseUs = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: idx * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-slate-50 border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all group"
+                className="bg-slate-50 border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all group w-full"
               >
                  <div className="h-12 w-12 rounded-xl bg-white flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform">
                     <feature.icon className="h-6 w-6 text-primary" />
@@ -97,11 +97,11 @@ const WhyChooseUs = () => {
                whileInView={{ opacity: 1, scale: 1 }}
                viewport={{ once: true }}
                transition={{ duration: 0.5 }}
-               className="bg-primary p-8 rounded-2xl text-primary-foreground flex flex-col justify-center items-center text-center shadow-xl shadow-primary/20"
+               className="bg-primary p-10 rounded-3xl text-primary-foreground flex flex-col justify-center items-center text-center shadow-2xl shadow-primary/30 w-full lg:min-h-[300px]"
             >
-              <h3 className="text-2xl font-bold mb-2">Ready to start?</h3>
-              <p className="mb-6 opacity-90">Get a free consultation for your next big project.</p>
-              <button className="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors w-full">
+              <h3 className="text-3xl font-bold mb-4">Ready to start?</h3>
+              <p className="text-lg mb-8 opacity-90 max-w-md">Get a free consultation for your next big project and see how we can help your business grow.</p>
+              <button className="bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg">
                 Get a Quote
               </button>
             </motion.div>
