@@ -147,18 +147,19 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-slate-50/30">
       <Navbar />
       
-      {/* Light, Minimalist Header */}
-      <section className="relative pt-28 pb-16 overflow-hidden bg-white border-b border-slate-100">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px]" />
-          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-100/20 rounded-full blur-[80px]" />
-          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: `radial-gradient(#2563eb 1px, transparent 1px)`, backgroundSize: '32px 32px' }} />
+      {/* Hero Section */}
+      <section className="relative pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden bg-slate-50/50 border-b border-slate-100">
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/40 rounded-full blur-[120px] -mr-64 -mt-32" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] -ml-32 -mb-16" />
+          <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: `linear-gradient(#2563eb 1px, transparent 1px), linear-gradient(90deg, #2563eb 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
         </div>
 
         <div className="container relative z-10 text-center mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="max-w-4xl mx-auto"
           >
             <Badge className="mb-4 bg-primary/10 text-primary border-none px-4 py-1 hover:bg-primary/20 transition-colors">
