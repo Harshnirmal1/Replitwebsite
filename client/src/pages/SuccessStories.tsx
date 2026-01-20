@@ -7,8 +7,9 @@ import Contact from "@/components/sections/Contact";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import heroBg from "@assets/generated_images/abstract_tech_hero_background.png";
 import fintechCaseImg from "@assets/generated_images/modern_fintech_dashboard_visualization_blue_cyan.png";
+import retailImg from "@assets/stock_images/modern_retail_e-comm_e3692d51.jpg";
 
-const successStories = [
+export const successStories = [
   {
     client: "Global Fintech Solutions",
     industry: "Financial Services",
@@ -32,6 +33,14 @@ const successStories = [
     solution: "End-to-end custom ERP with IoT integration for real-time fleet tracking.",
     impact: "Saved $1.2M annually by eliminating inventory discrepancies.",
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    client: "RetailFlow Omni",
+    industry: "E-commerce",
+    challenge: "Managing fragmented inventory across 50+ physical stores and online channels.",
+    solution: "Omnichannel Odoo implementation with real-time POS synchronization.",
+    impact: "Boosted fulfillment speed by 35% and increased cross-channel sales by 20%.",
+    image: retailImg
   }
 ];
 
