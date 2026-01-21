@@ -54,10 +54,25 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button size="lg" className="text-lg px-10 h-14 bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/20 transition-all rounded-full">
+            <Button 
+              size="lg" 
+              className="text-lg px-10 h-14 bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/20 transition-all rounded-full"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Talk to Us <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-10 h-14 border-slate-200 bg-white/50 backdrop-blur-sm hover:bg-slate-50 transition-all rounded-full">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg px-10 h-14 border-slate-200 bg-white/50 backdrop-blur-sm hover:bg-slate-50 transition-all rounded-full"
+              onClick={() => {
+                if (window.location.pathname !== '/') {
+                  window.location.href = '/success-stories';
+                } else {
+                  document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               View Success Stories
             </Button>
           </motion.div>

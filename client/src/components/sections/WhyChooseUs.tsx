@@ -101,7 +101,10 @@ const WhyChooseUs = () => {
             >
               <h3 className="text-3xl font-bold mb-4">Ready to start?</h3>
               <p className="text-lg mb-8 opacity-90 max-w-md">Get a free consultation for your next big project and see how we can help your business grow.</p>
-              <button className="bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg">
+              <button 
+                className="bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Get a Quote
               </button>
             </motion.div>
