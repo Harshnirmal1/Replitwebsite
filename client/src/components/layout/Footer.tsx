@@ -35,10 +35,10 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Services</h4>
             <ul className="space-y-3">
+              <li><Link href="/services#odoo-erp" className="hover:text-primary transition-colors cursor-pointer">Odoo / ERP Solutions</Link></li>
               <li><Link href="/services#web-development" className="hover:text-primary transition-colors cursor-pointer">Web Development</Link></li>
               <li><Link href="/services#mobile-apps" className="hover:text-primary transition-colors cursor-pointer">Mobile Apps</Link></li>
               <li><Link href="/services#custom-software" className="hover:text-primary transition-colors cursor-pointer">Custom Software</Link></li>
-              <li><Link href="/services#odoo-erp" className="hover:text-primary transition-colors cursor-pointer">Odoo / ERP Solutions</Link></li>
               <li><Link href="/services#ai-ml" className="hover:text-primary transition-colors cursor-pointer">AI / ML Solutions</Link></li>
             </ul>
           </div>

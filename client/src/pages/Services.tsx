@@ -27,6 +27,21 @@ import maintenanceImg from "@assets/generated_images/it_maintenance_and_server_s
 
 const services = [
   {
+    id: "odoo-erp",
+    title: "Odoo / ERP Solutions",
+    h2: "Expert Odoo Development and ERP Implementation",
+    description: "Streamline your entire business with a centralized ERP. As experts in Odoo development, we help you consolidate accounting, inventory, CRM, and HR into one seamless ecosystem that grows with your company.",
+    benefits: [
+      "Custom Odoo Module Development",
+      "Full-cycle ERP Implementation",
+      "Seamless Data Migration from Legacy ERPs",
+      "Third-party Software Integrations"
+    ],
+    useCases: "Essential for manufacturing, distribution, and large-scale retail operations requiring tight inventory control.",
+    icon: Layers,
+    image: erpImg
+  },
+  {
     id: "web-development",
     title: "Web Development Services",
     h2: "Custom Web Development Company for Enterprise Solutions",
@@ -85,21 +100,6 @@ const services = [
     useCases: "Used for demand forecasting, automated customer support (AI Chatbots), and intelligent document processing.",
     icon: BrainCircuit,
     image: aiMlImg
-  },
-  {
-    id: "odoo-erp",
-    title: "Odoo / ERP Solutions",
-    h2: "Expert Odoo Development and ERP Implementation",
-    description: "Streamline your entire business with a centralized ERP. As experts in Odoo development, we help you consolidate accounting, inventory, CRM, and HR into one seamless ecosystem that grows with your company.",
-    benefits: [
-      "Custom Odoo Module Development",
-      "Full-cycle ERP Implementation",
-      "Seamless Data Migration from Legacy ERPs",
-      "Third-party Software Integrations"
-    ],
-    useCases: "Essential for manufacturing, distribution, and large-scale retail operations requiring tight inventory control.",
-    icon: Layers,
-    image: erpImg
   },
   {
     id: "white-label",
