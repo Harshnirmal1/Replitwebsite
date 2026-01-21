@@ -53,11 +53,18 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Link href="/contact">
-            <Button className="font-semibold shadow-lg shadow-primary/20">
-              Talk to Us
-            </Button>
-          </Link>
+          <Button 
+            className="font-semibold shadow-lg shadow-primary/20"
+            onClick={() => {
+              if (window.location.pathname !== '/') {
+                window.location.href = '/#contact-form';
+              } else {
+                document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Talk to Us
+          </Button>
         </div>
 
         {/* Mobile Toggle */}

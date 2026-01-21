@@ -98,10 +98,11 @@ const Hero = () => {
           </motion.div>
 
           <motion.div
+            id="contact-form"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
+            className="relative scroll-mt-32"
           >
             <div className="absolute -inset-4 bg-primary/5 rounded-[2.5rem] blur-2xl -z-10" />
             <div className="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-2xl border border-slate-100 relative overflow-hidden">
