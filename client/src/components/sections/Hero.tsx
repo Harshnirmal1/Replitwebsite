@@ -33,9 +33,9 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-extrabold font-heading leading-tight mb-6 text-slate-900 tracking-tight"
           >
-            Enterprise Software & <br />
+            Top Odoo ERP & <br />
             <span className="text-primary">
-              IT Solutions Provider
+              IT Solutions Partner
             </span>
           </motion.h1>
 

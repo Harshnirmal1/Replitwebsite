@@ -29,8 +29,8 @@ const services = [
   {
     id: "odoo-erp",
     title: "Odoo / ERP Solutions",
-    h2: "Expert Odoo Development and ERP Implementation",
-    description: "Streamline your entire business with a centralized ERP. As experts in Odoo development, we help you consolidate accounting, inventory, CRM, and HR into one seamless ecosystem that grows with your company.",
+    h2: "Best Odoo Development & ERP Implementation Partner",
+    description: "Ranked as a top Odoo ERP partner, we streamline your business with centralized ERP solutions. From inventory to CRM, our custom Odoo modules empower enterprise scalability.",
     benefits: [
       "Custom Odoo Module Development",
       "Full-cycle ERP Implementation",
