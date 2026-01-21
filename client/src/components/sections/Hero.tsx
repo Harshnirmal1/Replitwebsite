@@ -33,9 +33,9 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-extrabold font-heading leading-tight mb-6 text-slate-900 tracking-tight"
           >
-            Scalable Web, App & <br />
+            Enterprise Software & <br />
             <span className="text-primary">
-              Software Solutions
+              IT Solutions Provider
             </span>
           </motion.h1>
 
@@ -45,8 +45,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            We transform complex business challenges into elegant digital products. 
-            From enterprise platforms to mobile apps, we build the technology that powers your growth.
+            Raghav Technologies delivers high-performance web development, mobile apps, and custom software solutions. We are your trusted partner for Odoo ERP and AI/ML engineering.
           </motion.p>
 
           <motion.div
