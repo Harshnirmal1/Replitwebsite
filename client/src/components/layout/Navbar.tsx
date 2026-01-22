@@ -31,38 +31,40 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-700 w-[95%] max-w-[1200px] rounded-full",
-        scrolled ? "bg-white/5 backdrop-blur-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.4)] border border-white/10 py-2 px-6" : "bg-transparent py-4 px-2"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        scrolled ? "bg-white/90 backdrop-blur-xl border-b border-slate-100 shadow-sm py-3" : "bg-transparent py-5"
       )}
     >
-      <div className="flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between">
         <Link href="/">
           <div className="flex items-center gap-2 cursor-pointer group">
-            <img src={logo} alt="Raghav Technologies Logo" className="h-12 w-auto transition-transform duration-500 group-hover:scale-110 brightness-0 invert" />
+            <img src={logo} alt="Raghav Technologies Logo" className="h-14 w-auto transition-transform duration-500 group-hover:scale-105" />
           </div>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               className={cn(
-                "px-4 py-2 text-sm font-bold transition-all duration-300 rounded-full",
-                location === link.href ? "text-white bg-white/10" : "text-slate-400 hover:text-white hover:bg-white/5"
+                "text-sm font-semibold transition-colors relative group",
+                location === link.href ? "text-primary" : "text-slate-600 hover:text-primary"
               )}
             >
               {link.name}
+              <span className={cn(
+                "absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full",
+                location === link.href && "w-full"
+              )} />
             </Link>
           ))}
-          <div className="ml-4 pl-4 border-l border-white/10">
-            <Link href="/contact">
-              <Button className="rounded-full px-6 bg-white hover:bg-slate-200 text-slate-900 font-bold shadow-lg shadow-white/5">
-                Let's Talk
-              </Button>
-            </Link>
-          </div>
+          <Link href="/contact">
+            <Button className="rounded-full px-8 bg-primary hover:bg-primary/90 text-white font-bold shadow-lg shadow-primary/20">
+              Get Started
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}

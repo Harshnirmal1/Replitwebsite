@@ -6,95 +6,105 @@ import { Link } from "wouter";
 
 const Hero = () => {
   return (
-    <section className="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden mesh-gradient min-h-screen flex items-center">
-      {/* Immersive Background Elements */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <motion.div 
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.2, 0.1],
-            x: [0, 100, 0],
-            y: [0, -50, 0]
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-primary/20 rounded-full blur-[160px] -mr-96 -mt-48" 
-        />
-        <motion.div 
-          animate={{ 
-            scale: [1, 1.3, 1],
-            opacity: [0.05, 0.15, 0.05],
-            x: [0, -100, 0],
-            y: [0, 80, 0]
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-indigo-500/20 rounded-full blur-[140px] -ml-48 -mb-32" 
-        />
+    <section className="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden bg-white">
+      {/* Structural Background Decor */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 -skew-x-12 translate-x-32" />
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `linear-gradient(#2563eb 1px, transparent 1px), linear-gradient(90deg, #2563eb 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
       </div>
 
-      <div className="container mx-auto relative z-20 px-4 md:px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 30 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-10"
-          >
-            <Badge variant="outline" className="px-6 py-2 border-white/10 text-white bg-white/5 backdrop-blur-2xl rounded-full font-black text-xs uppercase tracking-[0.3em] shadow-2xl">
-              <span className="relative flex h-2 w-2 mr-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
-              </span>
-              Architecting Digital Excellence
-            </Badge>
-          </motion.div>
+      <div className="container mx-auto relative z-20">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+          <div className="flex-1 text-left">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-8"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 text-primary text-xs font-bold uppercase tracking-widest">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                Trusted IT Excellence
+              </div>
+            </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-6xl md:text-8xl lg:text-9xl font-black font-heading leading-[0.95] mb-10 text-white tracking-tighter"
-          >
-            Engineering <br className="hidden md:block" />
-            <span className="text-gradient">Limitless.</span>
-          </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-5xl md:text-7xl font-extrabold font-heading leading-[1.1] mb-8 text-slate-900 tracking-tight"
+            >
+              Next-Gen <span className="text-primary">Software</span> <br />
+              Architected for <br />
+              Business Growth.
+            </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="text-xl md:text-3xl text-slate-400 mb-16 max-w-4xl mx-auto leading-tight font-light tracking-tight"
-          >
-            We transform complex business visions into <span className="text-white font-medium">high-performance digital reality.</span> Global leaders in Odoo ERP, AI engineering, and custom software architecture.
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl text-slate-600 mb-12 max-w-xl leading-relaxed"
+            >
+              Raghav Technologies builds high-performance digital solutions—specializing in <span className="text-slate-900 font-bold">Odoo ERP</span>, <span className="text-slate-900 font-bold">AI Engineering</span>, and scalable enterprise software.
+            </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col sm:flex-row gap-8 justify-center items-center"
-          >
-            <Link href="/contact">
-              <motion.div whileHover={{ scale: 1.02, y: -4 }} whileTap={{ scale: 0.98 }}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="flex flex-wrap gap-6"
+            >
+              <Link href="/contact">
                 <Button 
                   size="lg" 
-                  className="text-xl px-16 h-20 bg-white hover:bg-slate-100 text-slate-950 shadow-[0_20px_50px_rgba(255,255,255,0.1)] transition-all rounded-full font-black"
+                  className="text-lg px-10 h-16 bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/20 transition-all rounded-xl font-bold"
                 >
-                  Innovate Now <ArrowRight className="ml-4 h-6 w-6" />
+                  Start Your Project <ArrowRight className="ml-3 h-5 w-5" />
                 </Button>
-              </motion.div>
-            </Link>
-          </motion.div>
+              </Link>
+              <Link href="/services">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="text-lg px-10 h-16 border-slate-200 bg-white shadow-sm hover:shadow-md transition-all rounded-xl font-bold"
+                >
+                  Explore Services
+                </Button>
+              </Link>
+            </motion.div>
+          </div>
 
-          {/* Luxury Minimalist Brands Section */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5, delay: 1 }}
-            className="mt-32 pt-16 border-t border-white/5 flex flex-wrap justify-center items-center gap-16"
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9, x: 20 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="flex-1 relative w-full max-w-[600px]"
           >
-            {['Enterprise Architecture', 'Odoo Gold Standard', 'AI Transformation', 'Cloud Intelligence'].map((text) => (
-              <span key={text} className="text-white/20 font-black uppercase tracking-[0.4em] text-[10px]">{text}</span>
-            ))}
+            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+               <img 
+                 src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800" 
+                 alt="Modern Engineering Team" 
+                 className="w-full h-full object-cover"
+               />
+               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent" />
+            </div>
+            {/* Floating Trust Card */}
+            <motion.div 
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-2xl border border-slate-100 max-w-[240px]"
+            >
+              <div className="flex items-center gap-4 mb-3">
+                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                  <CheckCircle className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-slate-900">200+</div>
+                  <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Success Stories</div>
+                </div>
+              </div>
+              <p className="text-xs text-slate-500 font-medium">Delivering excellence globally for 5+ years.</p>
+            </motion.div>
           </motion.div>
         </div>
       </div>

@@ -46,28 +46,37 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-32 bg-[#020617] relative overflow-hidden">
-      {/* Immersive Depth */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none overflow-hidden -z-10">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[140px] -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[140px] translate-x-1/2 translate-y-1/2" />
-      </div>
-
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-4xl mx-auto mb-24">
+    <section id="services" className="py-24 bg-white relative overflow-hidden">
+      <div className="container mx-auto">
+        <div className="flex flex-col lg:flex-row items-end justify-between mb-20 gap-8">
+          <div className="max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <Badge className="mb-4 bg-primary/10 text-primary border-none px-4 py-1.5 rounded-full font-bold">Expertise</Badge>
+              <h2 className="text-4xl md:text-6xl font-extrabold font-heading mb-6 text-slate-900 leading-[1.1] tracking-tighter">
+                Solutions that <br />
+                <span className="text-primary">Drive Success.</span>
+              </h2>
+              <p className="text-slate-600 text-xl leading-relaxed">
+                We bridge the gap between complex engineering and intuitive user experiences.
+              </p>
+            </motion.div>
+          </div>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Badge className="mb-6 bg-white/5 text-white border-white/10 px-6 py-2 rounded-full font-black tracking-[0.3em] uppercase text-[10px]">Expertise</Badge>
-            <h2 className="text-5xl md:text-7xl font-black font-heading mb-8 text-white tracking-tighter">
-              World Class <span className="text-gradient">Capabilities.</span>
-            </h2>
-            <p className="text-slate-400 text-xl md:text-2xl leading-tight font-light tracking-tight max-w-2xl mx-auto">
-              Engineering solutions that define industry standards and drive <span className="text-white font-medium">exponential growth.</span>
-            </p>
+            <Link href="/services">
+              <Button size="lg" variant="outline" className="rounded-full border-slate-200 hover:bg-slate-50 transition-all px-8 font-bold h-14">
+                View All Services <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
 
@@ -75,37 +84,23 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <motion.div 
-                whileHover={{ y: -16, transition: { duration: 0.4 } }}
-                className="h-full group"
-              >
-                <Card className="h-full border border-white/5 shadow-2xl group-hover:border-white/20 transition-all duration-700 bg-white/[0.02] backdrop-blur-3xl cursor-pointer relative overflow-hidden rounded-[2.5rem] p-4">
-                  <div className="absolute top-0 right-0 p-10 opacity-0 group-hover:opacity-100 transition-all duration-700 transform translate-x-4 -translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0">
-                    <div className="bg-white/10 p-3 rounded-full">
-                      <ArrowUpRight className="h-6 w-6 text-white" />
-                    </div>
-                  </div>
-                  <CardHeader className="p-8">
-                    <div className="h-20 w-20 rounded-3xl bg-white/5 flex items-center justify-center mb-10 group-hover:bg-white group-hover:text-slate-950 transition-all duration-700 rotate-6 group-hover:rotate-0 shadow-inner">
-                      <service.icon className="h-10 w-10 text-white group-hover:text-slate-950 transition-colors duration-700" />
-                    </div>
-                    <CardTitle className="text-3xl font-black font-heading mb-4 text-white tracking-tighter group-hover:text-primary transition-colors duration-500">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="px-8 pb-10">
-                    <p className="text-slate-400 leading-tight text-lg font-light tracking-tight">
-                      {service.description}
-                    </p>
-                  </CardContent>
-                  
-                  {/* Luxury Edge Glow */}
-                  <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-white to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
-                </Card>
-              </motion.div>
+              <div className="group h-full p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:border-white hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
+                <div className="h-14 w-14 rounded-2xl bg-white flex items-center justify-center mb-8 shadow-sm group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                  <service.icon className="h-7 w-7 text-primary group-hover:text-white transition-colors duration-500" />
+                </div>
+                <h3 className="text-2xl font-bold font-heading mb-4 text-slate-900 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
+                <p className="text-slate-600 leading-relaxed text-lg mb-8">
+                  {service.description}
+                </p>
+                <div className="flex items-center text-primary font-bold text-sm gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+                  Learn More <ArrowRight className="h-4 w-4" />
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
