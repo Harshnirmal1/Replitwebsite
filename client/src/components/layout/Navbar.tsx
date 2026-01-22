@@ -31,14 +31,14 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[95%] max-w-[1200px] rounded-full",
-        scrolled ? "bg-white/40 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/40 py-2 px-6" : "bg-transparent py-4 px-2"
+        "fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-700 w-[95%] max-w-[1200px] rounded-full",
+        scrolled ? "bg-white/5 backdrop-blur-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.4)] border border-white/10 py-2 px-6" : "bg-transparent py-4 px-2"
       )}
     >
       <div className="flex items-center justify-between">
         <Link href="/">
           <div className="flex items-center gap-2 cursor-pointer group">
-            <img src={logo} alt="Raghav Technologies Logo" className="h-12 w-auto transition-transform duration-500 group-hover:scale-110" />
+            <img src={logo} alt="Raghav Technologies Logo" className="h-12 w-auto transition-transform duration-500 group-hover:scale-110 brightness-0 invert" />
           </div>
         </Link>
 
@@ -50,15 +50,15 @@ const Navbar = () => {
               href={link.href}
               className={cn(
                 "px-4 py-2 text-sm font-bold transition-all duration-300 rounded-full",
-                location === link.href ? "text-primary bg-primary/5" : "text-slate-600 hover:text-primary hover:bg-slate-50"
+                location === link.href ? "text-white bg-white/10" : "text-slate-400 hover:text-white hover:bg-white/5"
               )}
             >
               {link.name}
             </Link>
           ))}
-          <div className="ml-4 pl-4 border-l border-slate-200">
+          <div className="ml-4 pl-4 border-l border-white/10">
             <Link href="/contact">
-              <Button className="rounded-full px-6 bg-slate-900 hover:bg-slate-800 text-white font-bold shadow-lg shadow-slate-900/10">
+              <Button className="rounded-full px-6 bg-white hover:bg-slate-200 text-slate-900 font-bold shadow-lg shadow-white/5">
                 Let's Talk
               </Button>
             </Link>

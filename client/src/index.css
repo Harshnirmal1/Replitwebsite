@@ -30,7 +30,7 @@
   --color-input: hsl(214.3 31.8% 91.4%);
   --color-ring: hsl(221 83% 53%);
 
-  --radius: 1.5rem;
+  --radius: 2rem;
 
   --font-sans: "Inter", system-ui, sans-serif;
   --font-heading: "Outfit", system-ui, sans-serif;
@@ -41,10 +41,10 @@
     @apply border-border;
   }
   body {
-    @apply font-sans antialiased bg-background text-foreground scroll-smooth overflow-x-hidden;
+    @apply font-sans antialiased bg-[#020617] text-slate-200 scroll-smooth overflow-x-hidden selection:bg-primary/30 selection:text-white;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-bold tracking-tight;
+    @apply font-heading font-bold tracking-tight text-white;
   }
 }
 
@@ -54,7 +54,7 @@
   }
   
   .glass {
-    @apply bg-white/40 backdrop-blur-2xl border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.04)];
+    @apply bg-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
   }
 
   .container {
@@ -62,11 +62,11 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-primary via-blue-600 to-indigo-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-blue-200 to-primary;
   }
   
   .section-padding {
-    @apply py-24 md:py-32;
+    @apply py-32 md:py-48;
   }
 
   .grain {
@@ -81,7 +81,8 @@
     width: 300%;
     height: 300%;
     background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-    opacity: 0.03;
+    opacity: 0.05;
+    filter: invert(1);
     pointer-events: none;
     z-index: 100;
     animation: grain 8s steps(10) infinite;
@@ -101,14 +102,22 @@
   }
 
   .mesh-gradient {
-    background-color: hsla(0, 100%, 50%, 0);
+    background-color: #020617;
     background-image:
-      radial-gradient(at 40% 20%, hsla(221, 83%, 53%, 0.1) 0px, transparent 50%),
-      radial-gradient(at 80% 0%, hsla(184, 100%, 50%, 0.1) 0px, transparent 50%),
-      radial-gradient(at 0% 50%, hsla(262, 100%, 70%, 0.1) 0px, transparent 50%),
-      radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 0.1) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 0.1) 0px, transparent 50%),
-      radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 0.1) 0px, transparent 50%),
-      radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 0.1) 0px, transparent 50%);
+      radial-gradient(at 0% 0%, hsla(221, 83%, 53%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(262, 100%, 70%, 0.1) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(221, 83%, 53%, 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(184, 100%, 50%, 0.1) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, hsla(221, 83%, 53%, 0.05) 0px, transparent 50%);
+  }
+
+  .card-aura {
+    @apply relative overflow-hidden;
+  }
+
+  .card-aura::after {
+    content: "";
+    @apply absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none;
+    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 40%);
   }
 }
