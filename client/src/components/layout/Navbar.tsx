@@ -31,33 +31,38 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm border-border/50 py-3" : "bg-transparent py-5"
+        "fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[95%] max-w-[1200px] rounded-full",
+        scrolled ? "bg-white/40 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/40 py-2 px-6" : "bg-transparent py-4 px-2"
       )}
     >
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="flex items-center justify-between">
         <Link href="/">
-          <div className="flex items-center gap-2 cursor-pointer">
-            <img src={logo} alt="Raghav Technologies Logo" className="h-16 w-auto" />
+          <div className="flex items-center gap-2 cursor-pointer group">
+            <img src={logo} alt="Raghav Technologies Logo" className="h-12 w-auto transition-transform duration-500 group-hover:scale-110" />
           </div>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className={cn(
+                "px-4 py-2 text-sm font-bold transition-all duration-300 rounded-full",
+                location === link.href ? "text-primary bg-primary/5" : "text-slate-600 hover:text-primary hover:bg-slate-50"
+              )}
             >
               {link.name}
             </Link>
           ))}
-          <Link href="/contact">
-            <Button className="font-semibold shadow-lg shadow-primary/20">
-              Talk to Us
-            </Button>
-          </Link>
+          <div className="ml-4 pl-4 border-l border-slate-200">
+            <Link href="/contact">
+              <Button className="rounded-full px-6 bg-slate-900 hover:bg-slate-800 text-white font-bold shadow-lg shadow-slate-900/10">
+                Let's Talk
+              </Button>
+            </Link>
+          </div>
         </div>
 
         {/* Mobile Toggle */}

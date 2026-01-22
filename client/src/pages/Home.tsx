@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20 selection:text-primary">
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20 selection:text-primary grain">
       <Navbar />
       <main>
         <Hero />
